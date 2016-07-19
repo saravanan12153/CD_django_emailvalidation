@@ -9,6 +9,7 @@
     </head>
     <body>
         <div id="wrapper">
+            <h3>Enter your email</h3>
             {% if messages %}
             <ul class="list-group">
                 {% for message in messages %}
@@ -17,7 +18,7 @@
             </ul>
             {% endif %}
             <div id="email">
-                <form action="/process" method="POST">
+                <form action="{% url 'process' %}" method="POST">
                     <div class="input-group input-group-lg">
                         <span class="input-group-addon" id="sizing-addon1">Email:</span>
                         <input type="text" name="email" class="form-control" aria-describedby="sizing-addon1">
